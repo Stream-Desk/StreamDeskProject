@@ -154,7 +154,7 @@ export default {
 
 <style scoped>
 .header {
-  margin-left: 20px;
+  margin-left: 22px;
 }
 .search {
   /* margin-left: 99%; */
