@@ -6,7 +6,7 @@ class AllTicketsDataService {
   }
 
   get(id) {
-    return http.get(`/api/Tickets/${id}`);
+    return http.get(`/api/Tickets/editlabo/${id}`);
   }
 
   create(data) {
@@ -31,6 +31,9 @@ class AllTicketsDataService {
 
   login(data) {
     return http.post(`/api/Users/authenticate`, data);
+  }
+  assign(id) {
+    return http.post(`/api/Tickets/Assignticket/${id}`);
   }
 }
 

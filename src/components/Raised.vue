@@ -11,6 +11,16 @@
 
             <email></email>
 
+            <div>
+              <v-btn
+                small
+                class="btns"
+                color="primary"
+                @click="assign(currentTicket.id)"
+                ><span class="px-2">Assign to me</span></v-btn
+              >
+            </div>
+
             <form v-if="currentTicket">
               <div class="form-group row">
                 <label class="col-sm-2 col-form-label">TicketId:</label>
@@ -160,7 +170,18 @@ export default {
     getColor(status) {
       if (status == "Open") return "amber";
       else if (status == "Resolved") return "green";
-      else return "purple";
+      else return "blue";
+    },
+
+    assign(id) {
+      AllTicketsDataService.assign(id)
+        .then((response) => {
+          this.currentTicket = response.data;
+          this.$router.push({ name: "Table" });
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     },
   },
   mounted() {
@@ -214,5 +235,11 @@ textarea {
   padding-left: 39%;
   font-weight: 600;
   font-size: 20px;
+}
+.btns {
+  line-height: 10px;
+  text-transform: capitalize;
+  margin-left: 59%;
+  margin-top: 5px;
 }
 </style>

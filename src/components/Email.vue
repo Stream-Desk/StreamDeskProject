@@ -117,7 +117,7 @@ export default {
       AllTicketsDataService.email(data)
         .then((response) => {
           this.email.id = response.data.id;
-          console.log(response.doata);
+          console.log(response.data);
           this.submitted = true;
         })
         .catch((e) => {
