@@ -188,19 +188,11 @@ input[type="submit"]:hover {
   margin-left: 85%;
 }
 .btns {
-  /* border: 1px solid white; */
-  /* margin: 0 5px; */
-  /* font-size: 16px; */
-  /* width: 10px;
-  height: 10px; */
   line-height: 10px;
   text-transform: capitalize;
   margin-left: 100%;
   margin-top: 20px;
 }
-/* .drawer {
-  margin-top: 1%;
-} */
 #buton::before {
   background-color: transparent !important;
 }

@@ -21,7 +21,7 @@
               >
             </div>
 
-            <form v-if="currentTicket">
+            <form v-if="currentTicket" class="forms">
               <div class="form-group row">
                 <label class="col-sm-2 col-form-label">TicketId:</label>
                 <div class="col-sm-10">
@@ -232,7 +232,6 @@ textarea {
 }
 .h6 {
   color: rgb(2, 33, 68);
-  padding-left: 39%;
   font-weight: 600;
   font-size: 20px;
 }
@@ -241,5 +240,8 @@ textarea {
   text-transform: capitalize;
   margin-left: 59%;
   margin-top: 5px;
+}
+.forms{
+  margin-top: -20%;
 }
 </style>
